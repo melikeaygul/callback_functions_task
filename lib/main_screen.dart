@@ -7,14 +7,30 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           spacing: 16,
           children: [
-            InputCounterBox(),
-            InputCounterBox(),
-            InputCounterBox(),
+            InputCounterBox(
+              backgroundColor: Colors.blue[100]!,
+              onTextChanged: (text) {
+                print('Benutzer hat folgenden Text eingegeben: $text');
+              },
+            ),
+            InputCounterBox(
+              backgroundColor: Colors.red[100]!,
+              onTextChanged: (text) {
+                print('Benutzer hat folgenden Text eingegeben: $text');
+              },
+            ),
+            InputCounterBox(
+              backgroundColor: Colors.green[100]!,
+              onTextChanged: (text) {
+                print('Benutzer hat folgenden Text eingegeben: $text');
+              },
+            ),
           ],
         ),
       ),
